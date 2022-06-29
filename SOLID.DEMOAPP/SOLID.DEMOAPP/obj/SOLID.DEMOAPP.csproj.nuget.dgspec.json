@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
+        "projectName": "SOLID.DEMOAPP",
+        "projectPath": "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
+        "packagesPath": "C:\\Users\\jatin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jatin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\WebClient\\CALCONWEBAPI\\wm090322\\release\\WindowmakerInvoker\\bin\\Release": {},
+          "D:\\WebClient\\PublishNuget": {},
+          "D:\\Windowmaker\\Publish": {},
+          "Q:\\WM50\\WMPackageRepository-Development": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/Pn3ISBhu4V7CVoeBSxiRjzQa9rDFF1KWBcz8Xems6iiebBG9ka/api": {},
+          "https://pkgs.dev.azure.com/Windowmaker/_packaging/WindowMakerCore%40Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
