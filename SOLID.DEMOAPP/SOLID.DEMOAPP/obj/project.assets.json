@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jatin\\.nuget\\packages\\": {},
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
+      "projectUniqueName": "E:\\Work\\Practice\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
       "projectName": "SOLID.DEMOAPP",
-      "projectPath": "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
-      "packagesPath": "C:\\Users\\jatin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jatin\\source\\repos\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\obj\\",
+      "projectPath": "E:\\Work\\Practice\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "E:\\Work\\Practice\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jatin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -32,13 +32,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\WebClient\\CALCONWEBAPI\\wm090322\\release\\WindowmakerInvoker\\bin\\Release": {},
-        "D:\\WebClient\\PublishNuget": {},
-        "D:\\Windowmaker\\Publish": {},
-        "Q:\\WM50\\WMPackageRepository-Development": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/Pn3ISBhu4V7CVoeBSxiRjzQa9rDFF1KWBcz8Xems6iiebBG9ka/api": {},
-        "https://pkgs.dev.azure.com/Windowmaker/_packaging/WindowMakerCore%40Local/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -65,12 +59,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }
