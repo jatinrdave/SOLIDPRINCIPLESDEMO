@@ -23,7 +23,7 @@ namespace SOLID.DEMOAPP.ISP_AFTER
 
     public interface IBankCard
     {
-        BankCard ATMCardDetails { get; set; }
+        BankCard CardDetails { get; set; }
 
         //Bank Methods
     }
@@ -36,7 +36,7 @@ namespace SOLID.DEMOAPP.ISP_AFTER
 
     public class RegularBankAccount : ISavingBankAccount
     {
-        public BankCard ATMCardDetails { get; set; }
+        public BankCard CardDetails { get; set; }
         public CheckBook CheckBookDetails { get; set; }
         public double Balance { get; set; }
         public void Deposit(double amount)
@@ -58,7 +58,7 @@ namespace SOLID.DEMOAPP.ISP_AFTER
     }
     public class SalaryBankAccount : ISavingBankAccount
     {
-        public BankCard ATMCardDetails { get; set; }
+        public BankCard CardDetails { get; set; }
         public CheckBook CheckBookDetails { get; set; }
         public double Balance { get; set; }
         public void Deposit(double amount)
@@ -99,7 +99,7 @@ namespace SOLID.DEMOAPP.ISP_AFTER
 
     public class CreditCardAccount : IBankCard
     {
-        public BankCard ATMCardDetails { get; set; }
+        public BankCard CardDetails { get; set; }
 
         //Checkbook methods
     }
