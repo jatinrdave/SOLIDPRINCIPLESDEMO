@@ -1,6 +1,8 @@
 ﻿namespace SOLID.DEMOAPP.LSP_AFTER
 {
     //Liskov Substitute Principle Example
+    //Rule - Gether Common functionality and seperate out specific functionalities.
+
     public class BankCard
     {
     }
@@ -9,12 +11,14 @@
     {
     }
 
+    //Standard (Common) Facilities 
     public interface IBankAccount
     {
         public double Balance { get; set; }
         void Deposit(double amount);
         bool Withdrawl(double amount);
     }
+    //Specific to Saving bank account.
     public interface ISavingBankAccount : IBankAccount
     {
         BankCard ATMCardDetails { get; set; }

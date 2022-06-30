@@ -3,6 +3,7 @@
 namespace SOLID.DEMOAPP.LSP_BEFORE
 {
     //Liskov Substitute Principle Example
+    //Requirement : Bank have facility to open Saving bank accounts (Regular, Salary).
     public class BankCard
     {
     }
@@ -19,7 +20,7 @@ namespace SOLID.DEMOAPP.LSP_BEFORE
         BankCard ATMCardDetails { get; set; }
         CheckBook CheckBookDetails { get; set; }
     }
-
+    //Rule - Minimum balance should not be less than 1000 bucks.
     public class RegularSavingAccount : IBankAccount
     {
         public BankCard ATMCardDetails { get; set; }
@@ -42,6 +43,7 @@ namespace SOLID.DEMOAPP.LSP_BEFORE
                 return false;
         }
     }
+    //No minimum balance.
     public class SalarySavingAccount : IBankAccount
     {
         public BankCard ATMCardDetails { get; set; }
@@ -60,6 +62,7 @@ namespace SOLID.DEMOAPP.LSP_BEFORE
             return true;
         }
     }
+    //New Requirement - Bank wants to have new account type for fixed deposit.
     public class FixDepositSavingAccount : IBankAccount
     {
         public double Balance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

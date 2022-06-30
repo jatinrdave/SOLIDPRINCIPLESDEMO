@@ -1,6 +1,12 @@
 ﻿namespace SOLID.DEMOAPP.SRP_BEFORE
 {
     //Single Responsibility Principle Example
+
+    //Here class have three responsibility
+    //- Report Generation
+    //- Export Report
+    //- Print Report
+    //Violation of SRP
     public class ReportProcessor
     {
 
@@ -18,8 +24,6 @@
         {
             //Print Report to printer
         }
-
-
     }
 
     public static void main(object[] args)
