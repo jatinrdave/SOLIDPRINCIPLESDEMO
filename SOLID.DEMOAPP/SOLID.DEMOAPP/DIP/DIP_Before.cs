@@ -54,7 +54,7 @@
             //Generate Report
             reportGenerator.GenerateReport();
             //Save in database.
-            SaveToDB();
+            //SaveToDB();
         }
         public void ExportReport()
         {
@@ -72,15 +72,17 @@
             //Save to database
         }
     }
-
-    public static void main(object[] args)
+    public class Program
     {
-        //Export to Excel
-        ReportProcessor reportProcessor = new ReportProcessor(new ReportGenerator(), new ReportExporter(true), new ReportPrinter());
-        reportProcessor.ExportReport();
+        public static void main(object[] args)
+        {
+            //Export to Excel
+            ReportProcessor reportProcessor = new ReportProcessor(new ReportGenerator(), new ReportExporter(true), new ReportPrinter());
+            reportProcessor.ExportReport();
 
-        //Export to Document
-        ReportProcessor reportProcessor1 = new ReportProcessor(new ReportGenerator(), new ReportExporter(false), new ReportPrinter());
-        reportProcessor1.ExportReport();
+            //Export to Document
+            ReportProcessor reportProcessor1 = new ReportProcessor(new ReportGenerator(), new ReportExporter(false), new ReportPrinter());
+            reportProcessor1.ExportReport();
+        }
     }
 }

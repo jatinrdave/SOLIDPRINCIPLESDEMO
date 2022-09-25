@@ -1,6 +1,8 @@
-﻿namespace SOLID.DEMOAPP.DIP_AFTER
+﻿namespace SOLID.DEMOAPP.DEPINJ_AFTER
 {
-    //Dependency Inversion Principle Example
+    //Dependency Injection Example
+
+    #region Dependency classes
     public interface IReportGenerator
     {
         void GenerateReport();
@@ -47,64 +49,76 @@
         }
     }
     #endregion
-    public class Program
-    {
-        public static void main(object[] args)
-        {
-            //Export to Excel
-            ReportProcessor reportProcessor = new ReportProcessor(new ReportGenerator(), new ExcelReportExporter(), new ReportPrinter());
-            reportProcessor.ExportReport();
 
-            //Export to Document
-            ReportProcessor reportProcessor1 = new ReportProcessor(new ReportGenerator(), new DocReportExporter(), new ReportPrinter());
-            reportProcessor1.ExportReport();
-        }
-    }
+    #endregion
+
     
     public class ReportProcessor : IReportProcessor
     {
-        private readonly IReportGenerator reportGenerator;
-        private readonly IReportExporter reportExporter;
-        private readonly IReportPrinter reportPrinter;
 
-        public ReportProcessor(IReportGenerator reportGenerator, IReportExporter reportExporter, IReportPrinter reportPrinter)
+        #region Construction Injection
+        private readonly IReportGenerator reportGenerator;
+        public ReportProcessor(IReportGenerator reportGenerator)
         {
             this.reportGenerator = reportGenerator ?? throw new ArgumentNullException(nameof(reportGenerator));
-            this.reportExporter = reportExporter ?? throw new ArgumentNullException(nameof(reportExporter));
-            this.reportPrinter = reportPrinter ?? throw new ArgumentNullException(nameof(reportPrinter));
+            //this.reportExporter = reportExporter ?? throw new ArgumentNullException(nameof(reportExporter));
+            //this.reportPrinter = reportPrinter ?? throw new ArgumentNullException(nameof(reportPrinter));
         }
 
         public void GenerateReport()
         {
             //Generate Report
             reportGenerator.GenerateReport();
-            //Save in database.
-            SaveToDB();
         }
+
+        #endregion
+
+        #region Property Injection
+        public IReportExporter ReportExporter { get; set; }
+
         public void ExportReport()
         {
             //Export Report to Excel
-            reportExporter.ExportReport();
+            ReportExporter.ExportReport();
 
         }
-        public void PrintReport()
+        #endregion
+
+        #region Method Injection
+        public void PrintReport(IReportPrinter reportPrinter)
         {
             //Print Report
             reportPrinter.PrintReport();
         }
-        private void SaveToDB()
-        {
-            //Save to database
-        }
+        #endregion
+
     }
 
-
+    #region IReportProcessor
     public interface IReportProcessor
     {
         void GenerateReport();
         void ExportReport();
-        void PrintReport();
+        void PrintReport(IReportPrinter reportPrinter);
     }
-    
-    
+
+    #endregion
+
+    #region Main method
+    public class Program
+    {
+        public static void main(object[] args)
+        {
+            //Export to Excel
+            ReportProcessor reportProcessor = new ReportProcessor(new ReportGenerator());
+            reportProcessor.ReportExporter = new ExcelReportExporter();
+            reportProcessor.ExportReport();
+
+            //Print Report
+            ReportProcessor reportProcessor1 = new ReportProcessor(new ReportGenerator());
+            reportProcessor1.PrintReport(new ReportPrinter());
+        }
+    }
+    #endregion
+
 }

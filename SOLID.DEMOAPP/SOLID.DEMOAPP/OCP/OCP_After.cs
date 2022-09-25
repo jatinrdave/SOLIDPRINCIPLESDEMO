@@ -37,22 +37,24 @@
             //Export Report to Excel
         }
     }
-
-    public static void main(object[] args)
+    public class Program
     {
-        ReportGenerator reportGenerator = new ReportGenerator();
-        reportGenerator.GenerateReport();
+        public static void main(object[] args)
+        {
+            ReportGenerator reportGenerator = new ReportGenerator();
+            reportGenerator.GenerateReport();
 
-        ReportPrinter reportPrinter = new ReportPrinter();
-        reportPrinter.PrintReport();
+            ReportPrinter reportPrinter = new ReportPrinter();
+            reportPrinter.PrintReport();
 
-        //Using Excel Exporter
-        IReportExporter excelReportExporter = new ExcelReportExporter();
-        excelReportExporter.ExportReport();
+            //Using Excel Exporter
+            IReportExporter excelReportExporter = new ExcelReportExporter();
+            excelReportExporter.ExportReport();
 
-        //Using Document Exporter
-        IReportExporter docReportExporter = new DocReportExporter();
-        docReportExporter.ExportReport();
+            //Using Document Exporter
+            IReportExporter docReportExporter = new DocReportExporter();
+            docReportExporter.ExportReport();
+        }
     }
 
 

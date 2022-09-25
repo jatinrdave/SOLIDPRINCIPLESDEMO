@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ehU0U6MxABMzmWRZWOsguAdYRKJ+KFlwT3ov/LnhrBzquYzqa/gvdmnyrdA094u8gwUN18kb/lTRN1QLXikkDA==",
+  "dgSpecHash": "Dr55PORfk3PpExUf37IsHfPQIWpZd/JC858eBv073m6+QXASuTMDxsq6CHzMsu1NLl2YkImr16+2xaH1XGRJ3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\jatin\\Downloads\\SOLIDPRINCIPLESDEMO\\SOLIDPRINCIPLESDEMO\\SOLID.DEMOAPP\\SOLID.DEMOAPP\\SOLID.DEMOAPP.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jatin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

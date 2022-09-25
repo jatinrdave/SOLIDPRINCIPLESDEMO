@@ -25,12 +25,14 @@
             //Print Report to printer
         }
     }
-
-    public static void main(object[] args)
+    public class Program
     {
-        ReportProcessor reportProcessor = new ReportProcessor();
-        reportProcessor.GenerateReport();
-        reportProcessor.ExportReport();
-        reportProcessor.PrintReport();
+        public static void main(object[] args)
+        {
+            ReportProcessor reportProcessor = new ReportProcessor();
+            reportProcessor.GenerateReport();
+            reportProcessor.ExportReport();
+            reportProcessor.PrintReport();
+        }
     }
 }

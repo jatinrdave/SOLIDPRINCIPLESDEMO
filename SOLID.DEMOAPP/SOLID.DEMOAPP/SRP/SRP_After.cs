@@ -30,21 +30,23 @@
         }
     }
 
-    
+
     //Call Individually whenever required. 
-    public static void main(object[] args)
+    public class Program
     {
-        ReportGenerator reportGenerator = new ReportGenerator();
-        reportGenerator.GenerateReport();
-       
-        ReportPrinter reportPrinter = new ReportPrinter();
-        reportPrinter.PrintReport();
+        public static void main(object[] args)
+        {
+            ReportGenerator reportGenerator = new ReportGenerator();
+            reportGenerator.GenerateReport();
 
-        //Using Excel Exporter
-        ReportExporter docReportExporter = new ReportExporter();
-        docReportExporter.ExportReport();
+            ReportPrinter reportPrinter = new ReportPrinter();
+            reportPrinter.PrintReport();
+
+            //Using Excel Exporter
+            ReportExporter docReportExporter = new ReportExporter();
+            docReportExporter.ExportReport();
+        }
     }
-
     //Delegate functionality Example.
     //public class ReportProcessor 
     //{

@@ -1,6 +1,6 @@
-﻿namespace SOLID.DEMOAPP.DIP_AFTER
+﻿namespace SOLID.DEMOAPP.DEPINJ_BEFORE
 {
-    //Dependency Inversion Principle Example
+    //Dependency Injection Example
     public interface IReportGenerator
     {
         void GenerateReport();
@@ -60,7 +60,13 @@
             reportProcessor1.ExportReport();
         }
     }
-    
+
+    public interface IReportProcessor
+    {
+        void GenerateReport();
+        void ExportReport();
+        void PrintReport();
+    }
     public class ReportProcessor : IReportProcessor
     {
         private readonly IReportGenerator reportGenerator;
@@ -98,13 +104,7 @@
         }
     }
 
+    
 
-    public interface IReportProcessor
-    {
-        void GenerateReport();
-        void ExportReport();
-        void PrintReport();
-    }
-    
-    
+
 }

@@ -35,22 +35,24 @@
             //Print Report
         }
     }
-
-    public static void main(object[] args)
+    public class Program
     {
-        ReportGenerator reportGenerator = new ReportGenerator();
-        reportGenerator.GenerateReport();
+        public static void main(object[] args)
+        {
+            ReportGenerator reportGenerator = new ReportGenerator();
+            reportGenerator.GenerateReport();
 
-        ReportPrinter reportPrinter = new ReportPrinter();
-        reportPrinter.PrintReport();
+            ReportPrinter reportPrinter = new ReportPrinter();
+            reportPrinter.PrintReport();
 
-        //Using Excel Exporter
-        ReportExporter excelReportExporter = new ReportExporter(true);
-        excelReportExporter.ExportReport();
+            //Using Excel Exporter
+            ReportExporter excelReportExporter = new ReportExporter(true);
+            excelReportExporter.ExportReport();
 
-        //Using Document Exporter
-        ReportExporter docReportExporter = new ReportExporter(false);
-        docReportExporter.ExportReport();
+            //Using Document Exporter
+            ReportExporter docReportExporter = new ReportExporter(false);
+            docReportExporter.ExportReport();
+        }
     }
 
     //public class ReportProcessor
