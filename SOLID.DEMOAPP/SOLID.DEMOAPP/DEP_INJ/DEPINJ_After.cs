@@ -56,7 +56,7 @@
     public class ReportProcessor : IReportProcessor
     {
 
-        #region Construction Injection
+        #region Constructor Injection
         private readonly IReportGenerator reportGenerator;
         public ReportProcessor(IReportGenerator reportGenerator)
         {

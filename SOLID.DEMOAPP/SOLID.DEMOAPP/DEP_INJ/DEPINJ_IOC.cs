@@ -157,10 +157,10 @@ namespace SOLID.DEMOAPP.DEPINJ_IOC
         {
             bool isExcelReport = false; 
             services.AddScoped<IReportPrinter, ReportPrinter>();
-            services.AddScoped<IReportGenerator, ReportGenerator>();
+            services.AddTransient<IReportGenerator, ReportGenerator>();
             if (isExcelReport)
             {
-                services.AddScoped<IReportExporter, ExcelReportExporter>();
+                services.AddSingleton<IReportExporter, ExcelReportExporter>();
             }
             else
             {

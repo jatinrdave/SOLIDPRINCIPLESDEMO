@@ -104,7 +104,50 @@
         }
     }
 
-    
+
+    //When Controls are not inverted.
+    public class _ReportProcessor : IReportProcessor
+    {
+        private readonly IReportGenerator reportGenerator;
+        private readonly IReportExporter reportExporter;
+        private readonly IReportPrinter reportPrinter;
+
+        public _ReportProcessor()
+        {
+            this.reportGenerator = new ReportGenerator();
+            this.reportExporter = new ExcelReportExporter();
+            this.reportPrinter = new ReportPrinter();
+        }
+
+        public void GenerateReport()
+        {
+            //Generate Report
+            reportGenerator.GenerateReport();
+            //Save in database.
+            SaveToDB();
+        }
+        public void ExportReport()
+        {
+            //Export Report to Excel
+            reportExporter.ExportReport();
+
+        }
+        public void PrintReport()
+        {
+            //Print Report
+            reportPrinter.PrintReport();
+        }
+        private void SaveToDB()
+        {
+            //Save to database
+        }
+    }
+
+
+
+
+
+
 
 
 }

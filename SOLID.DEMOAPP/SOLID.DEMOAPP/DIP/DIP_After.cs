@@ -28,7 +28,7 @@
     {
         public void ExportReport()
         {
-            //Export Report to Excel
+            //Export Report to Doc
         }
     }
     #endregion
